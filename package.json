@@ -1,0 +1,25 @@
+{
+  "name": "json-porter",
+  "version": "1.0.0",
+  "description": "Download any JavaScript object as JSON or upload a JSON file to import a JavaScript object",
+  "main": "json-porter.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "del json-porter.js json-porter.js.map json-porter.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JSON",
+    "JavaScript",
+    "import",
+    "export",
+    "download",
+    "upload"
+  ],
+  "author": "Mark Gabriel",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "es6-promise": "^4.2.8"
+  }
+}
