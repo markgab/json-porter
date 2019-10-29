@@ -5,14 +5,23 @@
  * Version:     1.0
  * License:     MIT
  *****************************************************************************************************/
+
 export default class JsonPorter<T> {
 
     /**
      * HTML Imput element 
      */
-    private _inputFile: HTMLInputElement;                                   // Hidden file input for uploading a JSON file
-    private _importResolve: (obj: T) => any;                                // Import promise resolve function
-    private _importReject: (err: any) => void;                              // Import promise reject function
+    private _inputFile: HTMLInputElement;
+
+    /**
+     * Import promise resolve function
+     */
+    private _importResolve: (obj: T) => any;
+
+    /**
+     * Import promise reject function
+     */
+    private _importReject: (err: any) => void;
     
     /**
      * Accepts a data object and a filename, this function 
@@ -27,6 +36,10 @@ export default class JsonPorter<T> {
         let encoding = 'data:text/json;charset=utf-8,';                     // Prefix of download content establish text encoding schema
         let contents = JSON.stringify(obj, null, 2);                        // Prep payload of document contents
         let data: any;
+
+        if(!filename.match(/.+\..{1,5}$/i)) {                               // If a file extension is not provided
+            filename = filename + '.json';                                  // Assume a .json extension
+        }
 
         if (this._isIE()) {                                                 // Detect Internet Explorer
 
@@ -100,11 +113,11 @@ export default class JsonPorter<T> {
 
         try {
             let obj = JSON.parse(json);                                     // Parse contents
-            this._importResolve(<T>obj);
+            this._importResolve(<T>obj);                                    // Resolve import promise and return new object
         } catch(err) {
             this._importReject(err);                                        // Process any error
         } finally {
-            this._cleanUp();
+            this._cleanUp();                                                // Always wipe up the mess
         }
     }
 

@@ -32,13 +32,13 @@ var JsonPorter = /** @class */ (function () {
             var json = reader.result; // Get file contents
             try {
                 var obj = JSON.parse(json); // Parse contents
-                _this._importResolve(obj);
+                _this._importResolve(obj); // Resolve import promise and return new object
             }
             catch (err) {
                 _this._importReject(err); // Process any error
             }
             finally {
-                _this._cleanUp();
+                _this._cleanUp(); // Always wipe up the mess
             }
         };
     }

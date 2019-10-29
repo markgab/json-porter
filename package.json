@@ -1,7 +1,7 @@
 {
   "name": "json-porter",
   "version": "1.0.0",
-  "description": "Download any JavaScript object as JSON or upload a JSON file to import a JavaScript object",
+  "description": "Export any JavaScript object as a JSON file download or upload a JSON file to import a JavaScript object",
   "main": "json-porter.js",
   "scripts": {
     "build": "tsc",
@@ -14,11 +14,20 @@
     "import",
     "export",
     "download",
-    "upload"
+    "upload",
+    "stringify",
+    "parse",
+    "serialize",
+    "serialization",
+    "file",
+    "json file",
+    ".json"
   ],
   "author": "Mark Gabriel",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0"
+  },
   "dependencies": {
     "es6-promise": "^4.2.8"
   }

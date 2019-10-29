@@ -1,6 +1,6 @@
 # JSON Porter
 
-Export any JavaScript object as a JSON file download or upload a JSON file to import a JavaScript object. This is intended to be used within the contexted of a web browser, not within node.js since there are much better ways to do this in node.js.
+Export any JavaScript object as a JSON file download or upload a JSON file to import a JavaScript object. This is intended to be used within the contexted of a web browser, not within node.js since there are much better ways to do this in node.
 
 ## Example Usage
 
@@ -48,7 +48,7 @@ let obj2 = await jp.import();                         // Open file dialog and up
 This example would produce a JSON file with these contents which you could then import the file to reconstitute a clone of the original object.
 
 >MyObjectFilename.json
-```json
+```javascript
 {
   "name": "Object",
   "desc": "Hello World",
