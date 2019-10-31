@@ -48,7 +48,7 @@ let obj2 = await jp.import();                         // Open file dialog and up
 This example would produce a JSON file with these contents which you could then import the file to reconstitute a clone of the original object.
 
 >MyObjectFilename.json
-```javascript
+```json
 {
   "name": "Object",
   "desc": "Hello World",
