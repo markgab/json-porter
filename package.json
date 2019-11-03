@@ -1,6 +1,6 @@
 {
   "name": "json-porter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Export any JavaScript object as a JSON file download or upload a JSON file to import a JavaScript object",
   "main": "json-porter.js",
   "scripts": {
@@ -26,7 +26,6 @@
   ],
   "author": "Mark Gabriel",
   "license": "MIT",
-  "browserDependencies": {},
   "devDependencies": {
     "@types/es6-promise": "^3.3.0"
   },

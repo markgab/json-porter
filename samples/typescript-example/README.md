@@ -14,7 +14,7 @@ npm run serve
 
 # now open browser to http://localhost:8080
 
-# later delete dist folder to clean
+# later delete dist and lib folders to clean
 npm run clean
 
 ```

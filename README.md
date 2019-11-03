@@ -2,6 +2,13 @@
 
 Export any JavaScript object as a JSON file download or upload a JSON file to import a JavaScript object. This is intended to be used within the contexted of a web browser, not within node.js since there are much better ways to do this in node.
 
+## Getting Started
+```command
+
+npm install --save json-porter
+
+```
+
 ## Example Usage
 
 ### JavaScript
