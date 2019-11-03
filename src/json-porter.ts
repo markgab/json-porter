@@ -2,7 +2,7 @@
  * Description: Save a JavaScript object as a JSON file download, and import a JSON file to
  *              parse it to an object
  * Author:      Mark Gabriel
- * Version:     1.0
+ * Version:     1.0.2
  * License:     MIT
  *****************************************************************************************************/
 

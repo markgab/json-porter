@@ -7,7 +7,7 @@ Export any JavaScript object as a JSON file download or upload a JSON file to im
 ### JavaScript
 ```javascript
 
-var JsonPorter = require('json-porter');              // Import library
+var JsonPorter = require('json-porter').default;      // Import library
 
 let obj = new Object();                               // Have an object
 obj.name = 'Object';
