@@ -2,7 +2,7 @@
  * Description: Save a JavaScript object as a JSON file download, and import a JSON file to
  *              parse it to an object
  * Author:      Mark Gabriel
- * Version:     1.0
+ * Version:     1.0.2
  * License:     MIT
  *****************************************************************************************************/
 export default class JsonPorter<T> {
@@ -10,7 +10,13 @@ export default class JsonPorter<T> {
      * HTML Imput element
      */
     private _inputFile;
+    /**
+     * Import promise resolve function
+     */
     private _importResolve;
+    /**
+     * Import promise reject function
+     */
     private _importReject;
     /**
      * Accepts a data object and a filename, this function

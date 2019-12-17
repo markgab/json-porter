@@ -1,6 +1,6 @@
 {
   "name": "json-porter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Export any JavaScript object as a JSON file download or upload a JSON file to import a JavaScript object",
   "main": "json-porter.js",
   "scripts": {

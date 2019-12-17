@@ -17,6 +17,6 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "json-porter": "^1.0.1"
+    "json-porter": "^1"
   }
 }

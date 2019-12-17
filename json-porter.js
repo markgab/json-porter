@@ -1,10 +1,12 @@
+"use strict";
 /*****************************************************************************************************
  * Description: Save a JavaScript object as a JSON file download, and import a JSON file to
  *              parse it to an object
  * Author:      Mark Gabriel
- * Version:     1.0
+ * Version:     1.0.2
  * License:     MIT
  *****************************************************************************************************/
+Object.defineProperty(exports, "__esModule", { value: true });
 var JsonPorter = /** @class */ (function () {
     function JsonPorter() {
         var _this = this;
@@ -54,6 +56,9 @@ var JsonPorter = /** @class */ (function () {
         var encoding = 'data:text/json;charset=utf-8,'; // Prefix of download content establish text encoding schema
         var contents = JSON.stringify(obj, null, 2); // Prep payload of document contents
         var data;
+        if (!filename.match(/.+\..{1,5}$/i)) { // If a file extension is not provided
+            filename = filename + '.json'; // Assume a .json extension
+        }
         if (this._isIE()) { // Detect Internet Explorer
             data = new Blob([contents], { type: encoding }); // Handle download differently
             navigator.msSaveBlob(data, filename); // for IE
@@ -114,5 +119,5 @@ var JsonPorter = /** @class */ (function () {
     };
     return JsonPorter;
 }());
-export default JsonPorter;
+exports.default = JsonPorter;
 //# sourceMappingURL=json-porter.js.map
