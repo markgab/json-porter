@@ -16,7 +16,7 @@ npm install --save json-porter
 
 var JsonPorter = require('json-porter').default;      // Import library
 
-let obj = new Object();                               // Have an object
+var obj = new Object();                               // Have an object
 obj.name = 'Object';
 obj.desc = 'Hello World';
 obj.tags = [ 'JavaScript', 'Download', 'Upload' ]; 
